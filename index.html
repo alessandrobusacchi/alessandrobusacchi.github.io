@@ -92,6 +92,17 @@ p {
     color: #222;
 }
 
+.email-text a {
+    color: #222;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: 0.2s;
+}
+
+.email-text a:hover {
+    border-bottom: 1px solid #999;
+}
+
 /* ICON BUTTONS */
 .icon-buttons {
     margin-top: 25px;
@@ -101,8 +112,8 @@ p {
 }
 
 .icon-btn {
-    width: 44px;
-    height: 44px;
+    width: 52px;
+    height: 52px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -111,6 +122,7 @@ p {
     border: 1px solid #ddd;
     text-decoration: none;
     color: #111;
+    font-size: 18px;
     transition: 0.2s;
 }
 
@@ -170,9 +182,10 @@ p {
 
 <p>
 <strong>Email:</strong>
-<a href="mailto:ale.busacchi@gmail.com">ale.busacchi@gmail.com</a>
-|
-<a href="mailto:a.busacchi@students.uu.nl">a.busacchi@students.uu.nl</a>
+<span class="email-text">
+    <a href="mailto:ale.busacchi@gmail.com">ale.busacchi@gmail.com</a> |
+    <a href="mailto:a.busacchi@students.uu.nl">a.busacchi@students.uu.nl</a>
+</span>
 </p>
 
 <p>
@@ -207,7 +220,7 @@ I am particularly interested in research and development roles in visual computi
     </a>
 
     <!-- RESEARCHGATE -->
-    <a class="icon-btn" href="https://www.researchgate.net/profile/YOUR_PROFILE" target="_blank">
+    <a class="icon-btn" href="https://www.researchgate.net/profile/Alessandro-Busacchi/" target="_blank">
         <i class="fab fa-researchgate"></i>
     </a>
 
