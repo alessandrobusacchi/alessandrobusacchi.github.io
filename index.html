@@ -1,45 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Alessandro Busacchi</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alessandro Busacchi</title>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 900px;
-            margin: 60px auto;
-            line-height: 1.6;
-            padding: 0 20px;
-        }
-        h1 { font-size: 40px; }
-        h2 { margin-top: 40px; }
-    </style>
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+}
+
+/* LEFT SIDEBAR */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    background: #111;
+    color: white;
+    padding: 30px 20px;
+}
+
+.sidebar h2 {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.sidebar a {
+    display: block;
+    color: #bbb;
+    text-decoration: none;
+    margin: 15px 0;
+}
+
+.sidebar a:hover {
+    color: white;
+}
+
+/* MAIN CONTENT */
+.main {
+    margin-left: 270px;
+    padding: 40px;
+    max-width: 900px;
+}
+
+section {
+    margin-bottom: 60px;
+}
+
+h1 {
+    font-size: 40px;
+}
+</style>
 </head>
 
 <body>
 
-    <h1>Alessandro Busacchi</h1>
-    <p>Computer Vision • Computer Graphics • AI • Interactive Media</p>
+<!-- SIDEBAR -->
+<div class="sidebar">
+    <h2>Alessandro</h2>
 
-    <h2>About</h2>
-    <p>
-        Master's student in Computer Science with focus on visual computing,
-        immersive technologies, and AI-driven interactive systems.
-    </p>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="projects.html">Research & Projects</a>
+    <a href="publications.html">Publications</a>
+    <a href="#teaching">Teaching</a>
+</div>
 
-    <h2>Research</h2>
-    <p>
-        Speech-driven 3D facial animation and digital humans using deep learning.
-        SIGGRAPH 2026 accepted work.
-    </p>
+<!-- MAIN PAGE -->
+<div class="main">
 
-    <h2>Experience</h2>
-    <p>
-        Teaching Assistant (Utrecht University) and internships at Melazeta
-        focusing on XR, multiplayer systems, and AI integration.
-    </p>
+<section id="about">
+<h1>About</h1>
+<p>Computer Vision, Graphics, AI, XR enthusiast...</p>
+</section>
+
+<section id="education">
+<h1>Education</h1>
+<p>University of Twente / Utrecht University...</p>
+</section>
+
+<section id="experience">
+<h1>Experience</h1>
+<p>Internships, freelance, TA...</p>
+</section>
+
+<section id="skills">
+<h1>Skills</h1>
+<p>Python, C#, Unity, OpenGL, ML, XR...</p>
+</section>
+
+<section id="teaching">
+<h1>Teaching</h1>
+<p>Teaching Assistant at Utrecht University...</p>
+</section>
+
+</div>
 
 </body>
 </html>
