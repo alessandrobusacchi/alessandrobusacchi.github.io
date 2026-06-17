@@ -18,6 +18,9 @@ body {
     font-family: 'Inter', sans-serif;
     display: flex;
     background: #f6f7fb;
+    color: #374151; /* Softens overall body text from #222 */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 /* SIDEBAR */
@@ -72,10 +75,11 @@ body {
 }
 
 /* MAIN */
-.main {
-    margin-left: 280px;
-    padding: 50px;
-    max-width: 900px;
+.main > p[style*="color:#666"] {
+    color: #4b5563 !important; /* Muted but cohesive grey */
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: -0.01em;
 }
 
 section {
@@ -88,8 +92,14 @@ h1 {
 }
 
 p {
-    line-height: 1.75;
-    color: #222;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #374151;
+    margin-bottom: 20px;
+}
+
+strong {
+    color: #111827;
 }
 
 .email-text a {
@@ -173,23 +183,27 @@ p {
 }
 
 .card-title {
-    font-size: 24px;
-    font-weight: 600;
+    font-size: 22px;
+    font-weight: 700;
     color: #111827;
-    flex: 1;
-}
-
-.card-date {
-    font-size: 15px;
-    font-weight: 500;
-    color: #3b82f6;
-    white-space: nowrap;
+    letter-spacing: -0.02em;
 }
 
 .card-subtitle {
-    font-size: 17px;
-    color: #6b7280;
-    margin-bottom: 18px;
+    font-size: 16px;
+    color: #4b5563;
+    margin-bottom: 16px;
+    font-weight: 400;
+}
+
+.card-date {
+    font-size: 14px;
+    font-weight: 600;
+    color: #2563eb;
+    background: #eff6ff;
+    padding: 4px 10px;
+    border-radius: 6px;
+    border: 1px solid #dbeafe;
 }
 
 .card-content {
