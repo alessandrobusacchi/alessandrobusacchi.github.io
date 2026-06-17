@@ -210,6 +210,57 @@ p {
     margin-bottom: 0;
 }
 
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.skills-card {
+    background: white;
+    border-radius: 14px;
+    padding: 22px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+}
+
+.skills-card h2 {
+    font-size: 18px;
+    margin-bottom: 14px;
+    color: #111827;
+}
+
+.icon-row {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.icon-row img {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+}
+
+.icon-row img:hover {
+    transform: translateY(-2px);
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tags span {
+    background: #f3f4f6;
+    color: #111827;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 14px;
+}
+
 </style>
 </head>
 
@@ -557,8 +608,87 @@ I am particularly interested in research and development roles in visual computi
 </section>
 
 <section id="skills">
+
 <h1>Skills</h1>
-<p>Python, C#, Unity, OpenGL, ML, XR...</p>
+
+<div class="skills-grid">
+
+    <!-- Programming -->
+    <div class="skills-card">
+        <h2>Programming</h2>
+
+        <div class="icon-row">
+            <img src="icons/python.svg" title="Python">
+            <img src="icons/csharp.svg" title="C#">
+            <img src="icons/cpp.svg" title="C++">
+            <img src="icons/java.svg" title="Java">
+        </div>
+    </div>
+
+    <!-- ML -->
+    <div class="skills-card">
+        <h2>Machine Learning</h2>
+        <div class="tags">
+            <span>Deep Learning</span>
+            <span>PyTorch</span>
+            <span>Multimodal Learning</span>
+        </div>
+    </div>
+
+    <!-- CV -->
+    <div class="skills-card">
+        <h2>Computer Vision</h2>
+        <div class="tags">
+            <span>Image Processing</span>
+            <span>3D Reconstruction</span>
+            <span>Facial Tracking</span>
+        </div>
+    </div>
+
+    <!-- Multimodal -->
+    <div class="skills-card">
+        <h2>Multimodal & Data</h2>
+        <div class="tags">
+            <span>Audio-Visual Processing</span>
+            <span>Temporal Modeling</span>
+        </div>
+    </div>
+
+    <!-- XR -->
+    <div class="skills-card">
+        <h2>XR & HCI</h2>
+        <div class="tags">
+            <span>Unity</span>
+            <span>Unreal Engine</span>
+            <span>VR/AR Systems</span>
+            <span>HCI</span>
+        </div>
+    </div>
+
+    <!-- Systems -->
+    <div class="skills-card">
+        <h2>Systems</h2>
+        <div class="tags">
+            <span>Real-time Systems</span>
+            <span>Interactive Pipelines</span>
+            <span>Distributed Computing</span>
+        </div>
+    </div>
+
+    <!-- Tools -->
+    <div class="skills-card">
+        <h2>Tools</h2>
+
+        <div class="icon-row">
+            <img src="icons/git.svg" title="Git">
+            <img src="icons/jira.svg" title="JIRA">
+            <img src="icons/photon.png" title="Photon Fusion">
+            <img src="icons/8thwall.png" title="8thWall">
+        </div>
+    </div>
+
+</div>
+
 </section>
 
 </div>
