@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Publications | Alessandro Busacchi</title>
+
+<style>
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    background: #f6f7fb;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    position: fixed;
+    background: linear-gradient(180deg, #1f2937, #111827);
+    color: white;
+    padding: 30px 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 12px;
+    border: 3px solid rgba(255,255,255,0.2);
+}
+
+.sidebar h2 {
+    font-size: 18px;
+    margin: 10px 0 25px 0;
+    font-weight: 600;
+    text-align: center;
+}
+
+.sidebar a {
+    width: 100%;
+    display: block;
+    color: #cbd5e1;
+    text-decoration: none;
+    margin: 10px 0;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+.sidebar a:hover {
+    background: rgba(255,255,255,0.1);
+    color: white;
+}
+
+.sidebar a.active {
+    background: #3b82f6;
+    color: white;
+}
+
+/* MAIN */
+.main {
+    margin-left: 280px;
+    padding: 50px;
+    max-width: 900px;
+}
+
+h1 {
+    font-size: 52px;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: white;
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 28px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+    margin-bottom: 10px;
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #111827;
+    flex: 1;
+}
+
+.card-date {
+    font-size: 15px;
+    font-weight: 500;
+    color: #3b82f6;
+    white-space: nowrap;
+}
+
+.card-subtitle {
+    font-size: 17px;
+    color: #6b7280;
+    margin-bottom: 18px;
+}
+
+.card-content {
+    color: #374151;
+    line-height: 1.8;
+}
+
+.authors {
+    color: #4b5563;
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+
+.paper-subtitle {
+    margin-top: 8px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #6b7280;
+    line-height: 1.4;
+}
+
+.venue-badge {
+    display: inline-block;
+    margin-bottom: 18px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: #eff6ff;
+    color: #1d4ed8;
+    border: 1px solid #bfdbfe;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.publication-links {
+    margin-top: 22px;
+    display: flex;
+    gap: 14px;
+}
+
+.publication-links a {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #374151;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    transition: 0.2s;
+}
+
+.publication-links a:hover {
+    transform: translateY(-2px);
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.publication-links i {
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .main {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .card-header {
+        flex-direction: column;
+        gap: 6px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <img src="profile.jpg" class="profile-pic">
+  
+    <h2>Alessandro Busacchi</h2>
+
+    <a href="index.html#about">About</a>
+    <a href="index.html#education">Education</a>
+    <a href="index.html#experience">Experience</a>
+    <a href="index.html#skills">Skills</a>
+    <a href="projects.html">Research & Projects</a>
+    <a href="publications.html" class="active">Publications</a>
+
+</div>
+
+<div class="main">
+
+<section>
+
+<h1>Scientific Publications</h1>
+
+<div class="card">
+
+    <div class="card-header">
+
+        <div class="card-title">
+
+            AutoFaceARKit
+
+            <div class="paper-subtitle">
+                Deploying Speech-Driven 3D Facial Animation in Unreal Engine for Production-Ready Digital Humans
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="authors">
+        Alessandro Busacchi, Kazi Injamamul Haque, Zerrin Yumak
+    </div>
+
+    <div class="venue-badge">
+        SIGGRAPH 2026 Posters Program
+    </div>
+
+    <div class="card-content">
+
+        <p>
+            Speech-driven 3D facial animation research has shown promising
+            results, but most methods rely on representations that are not
+            compatible with production pipelines. In this work, we present a
+            deployable system that bridges this gap by enabling speech-driven
+            3D facial animation directly in Unreal Engine using ARKit-compatible
+            representations.
+        </p>
+
+        <p>
+            We construct the 3DMEAD-ARKit dataset by converting the MEAD corpus
+            into blendshape sequences using MediaPipe, retrain FaceDiffuser and
+            ProbTalk3D-X for stochastic and emotion-controllable animation, and
+            develop a modular Unreal Engine plugin supporting model selection
+            and parameter control.
+        </p>
+
+        <div class="publication-links">
+
+            <a href="https://github.com/your-repository" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+
+            <a href="https://scholar.google.com/" target="_blank">
+                <i class="fas fa-graduation-cap"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+</div>
+
+</body>
+</html>
