@@ -151,50 +151,65 @@ p {
     background: #2563eb;
 }
 
-.education-item {
+.card {
     background: white;
-    border-radius: 12px;
-    padding: 24px;
-    margin-bottom: 24px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 28px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+    transition: transform 0.2s ease;
 }
 
-.education-header {
+.card:hover {
+    transform: translateY(-2px);
+}
+
+.card-header {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
-    gap: 20px;
+    align-items: flex-start;
+    gap: 24px;
+    margin-bottom: 8px;
 }
 
-.education-school {
-    font-size: 22px;
+.card-title {
+    font-size: 24px;
     font-weight: 600;
     color: #111827;
     flex: 1;
 }
 
-.education-date {
-    font-size: 14px;
+.card-date {
+    font-size: 15px;
     font-weight: 500;
     color: #3b82f6;
     white-space: nowrap;
 }
 
-.education-degree {
-    font-size: 16px;
+.card-subtitle {
+    font-size: 17px;
     color: #6b7280;
-    margin-bottom: 16px;
+    margin-bottom: 18px;
 }
 
-.education-content {
+.card-content {
     color: #374151;
-    line-height: 1.7;
+    line-height: 1.8;
 }
 
-.education-content ul {
+.card-content ul {
     margin-top: 10px;
-    padding-left: 20px;
+    padding-left: 22px;
 }
+
+.card-content p:first-child {
+    margin-top: 0;
+}
+
+.card-content p:last-child {
+    margin-bottom: 0;
+}
+
 </style>
 </head>
 
@@ -289,35 +304,27 @@ I am particularly interested in research and development roles in visual computi
 
 <h1>Education</h1>
 
-<div class="education-item">
+<div class="card">
 
-    <div class="education-header">
-        <div class="education-school">
+    <div class="card-header">
+        <div class="card-title">
             Utrecht University (Utrecht, The Netherlands)
         </div>
 
-        <div class="education-date">
-            September 2024 – July 2026
+        <div class="card-date">
+            Sep 2024 – Jul 2026
         </div>
     </div>
 
-    <div class="education-degree">
-        Master of Science (MSc)
+    <div class="card-subtitle">
+        MSc in Game and Media Technology
     </div>
 
-    <div class="education-content">
+    <div class="card-content">
 
-        <p>
-            Computer Science - Game and Media Technology
-        </p>
+        <p><strong>Final GPA:</strong> 8.1 / 10</p>
 
-        <p>
-            Final GPA: 8.1/10
-        </p>
-
-        <p>
-            Relevant coursework:
-        </p>
+        <p><strong>Relevant Coursework</strong></p>
 
         <ul>
             <li>Computer Vision</li>
@@ -329,49 +336,47 @@ I am particularly interested in research and development roles in visual computi
         </ul>
 
         <p>
-            Thesis (Final grade: 8.55/10): Speech-Driven 3D Facial Animation Using Engine-Ready FACS Blendshape Representation
+            <strong>Thesis:</strong>
+            Speech-Driven 3D Facial Animation Using Engine-Ready FACS Blendshape Representation
+            (Grade: 8.55 / 10)
         </p>
 
     </div>
 
 </div>
 
+<div class="card">
 
-<div class="education-item">
-
-    <div class="education-header">
-        <div class="education-school">
+    <div class="card-header">
+        <div class="card-title">
             Hanyang University (Seoul, South Korea)
         </div>
 
-        <div class="education-date">
-            August 2023 – December 2023
+        <div class="card-date">
+            Aug 2023 – Dec 2023
         </div>
     </div>
 
-    <div class="education-degree">
-        Study Abroad (BSc Minor)
+    <div class="card-subtitle">
+        Study Abroad Program (BSc Minor)
     </div>
 
-    <div class="education-content">
+    <div class="card-content">
 
         <p>
             Specialization in Game Design & Development.
         </p>
 
         <p>
-            GPA: 4.5/5
+            <strong>GPA:</strong> 4.5 / 5
         </p>
 
-        <p>
-            Relevant coursework:
-        </p>
-        
+        <p><strong>Relevant Coursework</strong></p>
+
         <ul>
             <li>Artificial Intelligence and Machine Learning</li>
             <li>Introduction to Cognitive Sciences</li>
             <li>Architecture and Interaction</li>
-            <li>Introduction to Cognitive Sciences</li>
             <li>Entrepreneurship and Social Innovation</li>
         </ul>
 
@@ -379,37 +384,34 @@ I am particularly interested in research and development roles in visual computi
 
 </div>
 
+<div class="card">
 
-<div class="education-item">
-
-    <div class="education-header">
-        <div class="education-school">
+    <div class="card-header">
+        <div class="card-title">
             Fontys University of Applied Sciences (Eindhoven, The Netherlands)
         </div>
 
-        <div class="education-date">
-            August 2020 – July 2024
+        <div class="card-date">
+            Aug 2020 – Jul 2024
         </div>
     </div>
 
-    <div class="education-degree">
+    <div class="card-subtitle">
         BSc in ICT & Software Engineering
     </div>
 
-    <div class="education-content">
+    <div class="card-content">
 
         <p>
             Specialization in Game Design & Development.
         </p>
 
         <p>
-            GPA: 8.3/10
+            <strong>GPA:</strong> 8.3 / 10
         </p>
 
-        <p>
-            Relevant coursework:
-        </p>
-        
+        <p><strong>Relevant Coursework</strong></p>
+
         <ul>
             <li>Software Engineering</li>
             <li>Game Technology</li>
@@ -420,9 +422,41 @@ I am particularly interested in research and development roles in visual computi
 
 </div>
 
+</section>
+    
 <section id="experience">
+
 <h1>Experience</h1>
-<p>Internships, freelance, TA...</p>
+
+<div class="card">
+
+    <div class="card-header">
+        <div class="card-title">
+            Teaching Assistant
+        </div>
+
+        <div class="card-date">
+            Feb 2026 – Apr 2026
+        </div>
+    </div>
+
+    <div class="card-subtitle">
+        Utrecht University · Utrecht, The Netherlands
+    </div>
+
+    <div class="card-content">
+
+        <p>
+            Instructed Master's students in the Computer Animation course,
+            teaching high-fidelity motion capture workflows using VICON Shogun.
+            Supported motion capture, retargeting, and animation pipelines for
+            student film projects while contributing to assessment and grading.
+        </p>
+
+    </div>
+
+</div>
+
 </section>
 
 <section id="skills">
