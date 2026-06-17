@@ -1,25 +1,258 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Projects</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research & Projects</title>
+
 <style>
-body { font-family: Arial; max-width: 900px; margin: 60px auto; }
-a { color: blue; }
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    background: #f6f7fb;
+}
+
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    position: fixed;
+    background: linear-gradient(180deg, #1f2937, #111827);
+    color: white;
+    padding: 30px 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar h2 {
+    font-size: 18px;
+    margin: 10px 0 25px 0;
+    font-weight: 600;
+    text-align: center;
+}
+
+.sidebar a {
+    width: 100%;
+    display: block;
+    color: #cbd5e1;
+    text-decoration: none;
+    margin: 10px 0;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+.sidebar a:hover {
+    background: rgba(255,255,255,0.1);
+    color: white;
+}
+
+.sidebar a.active {
+    background: #3b82f6;
+    color: white;
+}
+
+.main {
+    margin-left: 280px;
+    padding: 50px;
+    max-width: 950px;
+}
+
+h1 {
+    font-size: 52px;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: white;
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 28px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 10px;
+}
+
+.card-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #111827;
+}
+
+.card-date {
+    font-size: 15px;
+    font-weight: 500;
+    color: #3b82f6;
+    white-space: nowrap;
+}
+
+.card-subtitle {
+    font-size: 16px;
+    color: #6b7280;
+    margin-bottom: 14px;
+}
+
+.card-content {
+    color: #374151;
+    line-height: 1.8;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 14px;
+}
+
+.tags span {
+    background: #f3f4f6;
+    color: #374151;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 13.5px;
+    font-weight: 500;
+    border: 1px solid #e5e7eb;
+}
+  
+.sidebar a.active {
+    background: #3b82f6;
+    color: white;
+}
+
+.project-image {
+    width: 100%;
+    border-radius: 12px;
+    margin: 18px 0 22px 0;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    object-fit: cover;
+}
+
+.project-links {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 14px;
+}
+
+.project-links a {
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid #e5e7eb;
+    background: #f9fafb;
+    transition: 0.2s;
+}
+
+.project-links a:hover {
+    background: #eef2ff;
+    border-color: #c7d2fe;
+}
+
 </style>
 </head>
 
 <body>
 
+<!-- SIDEBAR -->
+<div class="sidebar">
+
+    <h2>Alessandro Busacchi</h2>
+
+    <a href="index.html#about">About</a>
+    <a href="index.html#education">Education</a>
+    <a href="index.html#experience">Experience</a>
+    <a href="index.html#skills">Skills</a>
+    <a href="projects.html" class="active">Research & Projects</a>
+    <a href="publications.html">Publications</a>
+
+</div>
+
+<div class="main">
+
 <h1>Research & Projects</h1>
 
-<ul>
-<li>1</li>
-<li>2</li>
-<li>3</li>
-<li>3</li>
-</ul>
+<div class="card">
 
-<a href="index.html">← Back</a>
+    <div class="card-header">
+        <div class="card-title">
+            Speech-Driven 3D Facial Animation with ARKit Blendshape Representation
+        </div>
+
+        <div class="card-date">
+            MSc Thesis · 2025–2026
+        </div>
+    </div>
+
+    <div class="card-subtitle">
+        Utrecht University · Computer Vision / Graphics / AI
+    </div>
+
+    <!-- IMAGE -->
+    <img src="images/thesis_overview.png" class="project-image" alt="Thesis overview visualization">
+
+    <div class="card-content">
+
+        <p>
+            The goal of this project is to bridge academic speech-driven facial animation models
+            with production-ready animation pipelines by leveraging a semantic and artist-friendly
+            ARKit blendshape representation for control and integration in real-time systems.
+        </p>
+
+        <p>
+            The work focuses on building a multimodal pipeline combining visual and audio data to
+            generate ARKit blendshape representations, enabling controllable and expressive digital humans.
+        </p>
+
+        <ul>
+            <li>Built a multimodal pipeline combining audio and visual data for facial animation generation</li>
+            <li>Created a high-quality ARKit blendshape dataset from monocular video using MediaPipe</li>
+            <li>Adapted and trained speech-driven models to predict ARKit blendshape coefficients</li>
+            <li>Explored architectural improvements to increase expressiveness and fidelity</li>
+            <li>Developed a production-ready pipeline for integration into real animation workflows</li>
+            <li>Conducted user studies and qualitative/quantitative evaluation of realism and usability</li>
+        </ul>
+
+        <div class="tags">
+            <span>Speech-Driven Animation</span>
+            <span>ARKit Blendshapes</span>
+            <span>Multimodal Learning</span>
+            <span>Computer Vision</span>
+            <span>PyTorch</span>
+            <span>MediaPipe</span>
+        </div>
+
+        <!-- LINKS -->
+        <div class="project-links">
+            <a href="thesis.pdf" target="_blank">📄 Thesis PDF</a>
+            <a href="#" target="_blank">🔗 Project Page</a>
+            <a href="#" target="_blank">💻 Code (coming soon)</a>
+        </div>
+
+    </div>
+
+</div>
+
+</div>
 
 </body>
 </html>
