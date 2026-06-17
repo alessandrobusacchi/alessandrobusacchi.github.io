@@ -33,6 +33,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
 .profile-pic {
@@ -48,17 +49,19 @@ body {
     font-size: 18px;
     margin: 10px 0 25px 0;
     font-weight: 600;
+    width: 100%;
     text-align: center;
 }
 
 .sidebar a {
     width: 100%;
     display: block;
+    text-align: center;
     color: #cbd5e1;
     text-decoration: none;
     margin: 10px 0;
-    padding: 8px 12px;
-    border-radius: 6px;
+    padding: 10px 12px;
+    border-radius: 8px;
     transition: 0.2s;
 }
 
@@ -72,7 +75,10 @@ body {
     color: white;
 }
 
-/* MAIN */
+html {
+    scroll-behavior: smooth;
+}
+
 .main {
     margin-left: 280px;
     padding: 50px 60px;
@@ -290,6 +296,18 @@ p {
     margin-bottom: 16px;
     border-bottom: 1px solid #f3f4f6;
     padding-bottom: 8px;
+}
+
+section {
+    opacity: 0.2;
+    transform: translateY(10px);
+    transition: all 0.4s ease;
+}
+
+section:target,
+section.in-view {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 @media (max-width: 768px) {
@@ -718,27 +736,32 @@ I am particularly interested in research and development roles in visual computi
 
 </div>
 
-<!-- ACTIVE SCROLL -->
 <script>
 const links = document.querySelectorAll(".sidebar a[href^='#']");
 const sections = document.querySelectorAll("section");
 
+function setActive(id) {
+    links.forEach(link => {
+        link.classList.toggle("active", link.getAttribute("href") === "#" + id);
+    });
+}
+
 window.addEventListener("scroll", () => {
-    let current = sections[0].id;
+    let closestSection = sections[0];
+    let minDistance = Infinity;
 
     sections.forEach(section => {
-        const top = section.offsetTop - 150;
-        if (scrollY >= top) current = section.id;
-    });
+        const rect = section.getBoundingClientRect();
+        const distance = Math.abs(rect.top);
 
-    links.forEach(link => {
-        link.classList.remove("active");
-        if (link.getAttribute("href") === "#" + current) {
-            link.classList.add("active");
+        if (distance < minDistance) {
+            minDistance = distance;
+            closestSection = section;
         }
     });
+
+    setActive(closestSection.id);
 });
 </script>
-
 </body>
 </html>
