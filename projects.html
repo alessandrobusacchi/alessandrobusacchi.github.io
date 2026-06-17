@@ -10,12 +10,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Research & Projects</title>
 
-<style>
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
     display: flex;
     background: #f6f7fb;
+    font-size: 17px;
 }
 
 .sidebar {
@@ -29,11 +29,12 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
 .profile-pic {
-    width: 110px;
-    height: 110px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 12px;
@@ -44,17 +45,18 @@ body {
     font-size: 18px;
     margin: 10px 0 25px 0;
     font-weight: 600;
-    text-align: center;
+    width: 100%;
 }
 
 .sidebar a {
     width: 100%;
     display: block;
+    text-align: center;
     color: #cbd5e1;
     text-decoration: none;
     margin: 10px 0;
-    padding: 8px 12px;
-    border-radius: 6px;
+    padding: 10px 12px;
+    border-radius: 8px;
     transition: 0.2s;
 }
 
@@ -70,13 +72,14 @@ body {
 
 .main {
     margin-left: 280px;
-    padding: 50px;
-    max-width: 950px;
+    padding: 50px 60px;
+    max-width: 1100px;
 }
 
 h1 {
-    font-size: 52px;
-    margin-bottom: 10px;
+    font-size: 56px;
+    margin-bottom: 30px;
+    color: #1f2937;
 }
 
 .card {
@@ -95,12 +98,13 @@ h1 {
 .card-header {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     gap: 24px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .card-title {
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 600;
     color: #111827;
 }
@@ -113,14 +117,23 @@ h1 {
 }
 
 .card-subtitle {
-    font-size: 16px;
+    font-size: 17px;
     color: #6b7280;
-    margin-bottom: 14px;
+    margin-bottom: 18px;
 }
 
 .card-content {
     color: #374151;
     line-height: 1.8;
+}
+
+/* IMAGE */
+.project-image {
+    width: 100%;
+    border-radius: 12px;
+    margin: 18px 0 22px 0;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    object-fit: cover;
 }
 
 .tags {
@@ -139,20 +152,8 @@ h1 {
     font-weight: 500;
     border: 1px solid #e5e7eb;
 }
-  
-.sidebar a.active {
-    background: #3b82f6;
-    color: white;
-}
 
-.project-image {
-    width: 100%;
-    border-radius: 12px;
-    margin: 18px 0 22px 0;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-    object-fit: cover;
-}
-
+/* LINKS */
 .project-links {
     display: flex;
     gap: 14px;
@@ -177,17 +178,19 @@ h1 {
     border-color: #c7d2fe;
 }
 
+/* RESPONSIVE */
 @media (max-width: 768px) {
     body {
         flex-direction: column;
     }
+
     .sidebar {
         width: 100%;
         height: auto;
         position: relative;
         padding: 20px;
-        box-sizing: border-box;
     }
+
     .main {
         margin-left: 0;
         padding: 20px;
@@ -199,7 +202,6 @@ h1 {
 
 <body>
 
-<!-- SIDEBAR -->
 <div class="sidebar">
 
     <img src="profile.jpg" class="profile-pic">
@@ -241,8 +243,7 @@ h1 {
     <div class="card-content">
 
         <p>
-            Bridged academic speech-driven facial animation models with production-ready animation pipelines by leveraging 
-            a semantic and artist-friendly ARKit blendshape representation for control and integration in interactive systems.
+            Bridging academic speech-driven facial animation models with production-ready animation pipelines using a semantic ARKit-based blendshape representation.
         </p>
 
         <div class="tags">
@@ -250,11 +251,10 @@ h1 {
             <span>ARKit Blendshapes</span>
             <span>Deep Learning</span>
             <span>Computer Animation</span>
-            <span>Computer Vision</span>
             <span>PyTorch</span>
+            <span>Unreal Engine 5</span>
         </div>
 
-        <!-- LINKS -->
         <div class="project-links">
             <a href="#" target="_blank">
                 <i class="fas fa-graduation-cap"></i> Thesis Repository
@@ -281,7 +281,6 @@ h1 {
         Crowd Simulation Course · Utrecht University
     </div>
 
-    <!-- IMAGE -->
     <img src="images/thecyclist_overview.png" class="project-image" alt="Thesis overview visualization">
 
     <div class="card-content">
@@ -292,12 +291,12 @@ h1 {
 
         <div class="tags">
             <span>3D Crowd Simulation</span>
+            <span>Unity</span>
             <span>Waypoint Navigation System</span>
             <span>NavMesh</span>
             <span>Collision Avoidance (RVO)</span>
         </div>
 
-        <!-- LINKS -->
         <div class="project-links">
             <a href="https://github.com/matus01/The_Cyclist/" target="_blank">GitHub Repository</a>
         </div>
